@@ -1,14 +1,31 @@
-package mephi.b22901.kateero.laba2;
+package Laba2;
 
 public class Ork {
+
     private String name;
-//    private Weapon weapon;
-//    private Armor armor;
-//    private Banner banner;
+    private String weapon;
+    private String armor;
+    private String banner;
     private double strenght;
     private double agility;
     private double intelligence;
     private double health;
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
+    }
+
+    public void setArmor(String armor) {
+        this.armor = armor;
+    }
+
+    public void setBanner(String banner) {
+        this.banner = banner;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public void setStrenght(double strenght) {
         this.strenght = strenght;
