@@ -1,5 +1,9 @@
 package Weapon;
 
 public interface Weapon {
-    public String weapon();
+
+    public String basicWeapon();
+    
+    public String scoutWeapon();
+
 }

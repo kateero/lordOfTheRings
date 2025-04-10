@@ -3,7 +3,7 @@ package Builders;
 import GearFactory.OrkGearFactory;
 import com.github.javafaker.Faker;
 import java.util.Random;
-import Laba2.Ork;
+import mephi.b22901.kateero.laba2.Ork;
 
 public abstract class OrkBuilder {
 
@@ -28,8 +28,12 @@ public abstract class OrkBuilder {
         ork.setName(faker.lordOfTheRings().character());
     }
 
-    public void buildWeapon() {
-        ork.setWeapon(orkGearFactory.createWeapon());
+    public void buildWeapon(boolean scout) {
+        if (scout) {
+            ork.setWeapon(orkGearFactory.createScoutWeapon());
+        } else {
+            ork.setWeapon(orkGearFactory.createWeapon());
+        }
     }
 
     public void buildArmor() {

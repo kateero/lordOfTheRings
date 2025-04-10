@@ -8,7 +8,7 @@ public class MordorGearFactory implements OrkGearFactory {
 
     @Override
     public String createWeapon() {
-        return (new MordorWeapon()).weapon();
+        return (new MordorWeapon()).basicWeapon();
     }
 
     @Override
@@ -19,6 +19,11 @@ public class MordorGearFactory implements OrkGearFactory {
     @Override
     public String createBanner() {
         return (new MordorBanner()).banner();
+    }
+
+    @Override
+    public String createScoutWeapon() {
+        return (new MordorWeapon()).scoutWeapon();
     }
 
 }

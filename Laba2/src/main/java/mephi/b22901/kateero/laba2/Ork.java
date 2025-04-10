@@ -1,4 +1,4 @@
-package Laba2;
+package mephi.b22901.kateero.laba2;
 
 public class Ork {
 
@@ -45,6 +45,39 @@ public class Ork {
 
     public double getStrenght() {
         return strenght;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public String getArmor() {
+        return armor;
+    }
+
+    public String getBanner() {
+        return banner;
+    }
+
+    public double getAgility() {
+        return agility;
+    }
+
+    public double getIntelligence() {
+        return intelligence;
+    }
+
+    public double getHealth() {
+        return health;
+    }
+    
+    @Override
+    public String toString(){
+        return name;
     }
 
 }

@@ -1,5 +1,7 @@
 package Builders;
 
+import mephi.b22901.kateero.laba2.Ork;
+
 public class OrkDirector {
 
     private OrkBuilder orkBuilder;
@@ -8,24 +10,54 @@ public class OrkDirector {
         orkBuilder = OrkBuilderFactory.createOrkBuilder(nameTribe);
     }
 
-    public void createBasicOrk() {
+    private void createBasicOrk() {
+        orkBuilder.createNewOrk();
         orkBuilder.buildName();
         orkBuilder.buildStrenght();
         orkBuilder.buildAgility();
         orkBuilder.buildIntelligence();
         orkBuilder.buildHealth();
-        orkBuilder.buildWeapon();
+        orkBuilder.buildWeapon(false);
         orkBuilder.buildArmor();
     }
-    
-    public void createLeaderOrk() {
+
+    private void createLeaderOrk() {
+        orkBuilder.createNewOrk();
         orkBuilder.buildName();
         orkBuilder.buildStrenght();
         orkBuilder.buildAgility();
         orkBuilder.buildIntelligence();
         orkBuilder.buildHealth();
-        orkBuilder.buildWeapon();
+        orkBuilder.buildWeapon(false);
         orkBuilder.buildArmor();
         orkBuilder.buildBanner();
+    }
+
+    private void createScoutOrk() {
+        orkBuilder.createNewOrk();
+        orkBuilder.buildName();
+        orkBuilder.buildStrenght();
+        orkBuilder.buildAgility();
+        orkBuilder.buildIntelligence();
+        orkBuilder.buildHealth();
+        orkBuilder.buildWeapon(true);
+        orkBuilder.buildArmor();
+    }
+
+    public Ork getOrk() {
+        return orkBuilder.getOrk();
+    }
+
+    public void createOrk(String typeOrk) {
+        switch (typeOrk) {
+            case "Basic ork" ->
+                createBasicOrk();
+
+            case "Leader" ->
+                createLeaderOrk();
+
+            case "Scout" ->
+                createScoutOrk();
+        }
     }
 }

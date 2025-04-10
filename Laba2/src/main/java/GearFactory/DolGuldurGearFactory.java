@@ -8,7 +8,7 @@ public class DolGuldurGearFactory implements OrkGearFactory {
 
     @Override
     public String createWeapon() {
-        return (new DolGuldurWeapon()).weapon();
+        return (new DolGuldurWeapon()).basicWeapon();
     }
 
     @Override
@@ -19,6 +19,11 @@ public class DolGuldurGearFactory implements OrkGearFactory {
     @Override
     public String createBanner() {
         return (new DolGuldurBanner()).banner();
+    }
+
+    @Override
+    public String createScoutWeapon() {
+        return (new DolGuldurWeapon()).scoutWeapon();
     }
 
 }

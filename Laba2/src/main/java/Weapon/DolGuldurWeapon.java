@@ -1,10 +1,14 @@
 package Weapon;
 
-public class DolGuldurWeapon implements Weapon{
+public class DolGuldurWeapon implements Weapon {
 
     @Override
-    public String weapon() {
+    public String basicWeapon() {
         return "копьё";
     }
-           
+
+    @Override
+    public String scoutWeapon() {
+        return "острый кинжал";
+    }
 }

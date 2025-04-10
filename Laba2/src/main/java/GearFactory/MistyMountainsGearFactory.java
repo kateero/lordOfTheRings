@@ -8,7 +8,7 @@ public class MistyMountainsGearFactory implements OrkGearFactory{
 
     @Override
     public String createWeapon() {
-        return (new MistyMountainsWeapon()).weapon();
+        return (new MistyMountainsWeapon()).basicWeapon();
     }
 
     @Override
@@ -19,6 +19,11 @@ public class MistyMountainsGearFactory implements OrkGearFactory{
     @Override
     public String createBanner() {
         return (new MistyMountainsBanner()).banner();
+    }
+
+    @Override
+    public String createScoutWeapon() {
+        return (new MistyMountainsWeapon()).scoutWeapon();
     }
     
 }
