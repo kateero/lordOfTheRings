@@ -1,14 +1,13 @@
 package mephi.b22901.kateero.laba2;
 
-import mephi.b22901.kateero.laba2.Builders.MordorOrkBuilder;
-import mephi.b22901.kateero.laba2.Builders.OrkBuilder;
+import GUI.ArmySauron;
 
 public class Laba2 {
 
     public static void main(String[] args) {
-        OrkBuilder ob = new MordorOrkBuilder();
-        ob.createNewOrk();
-        ob.buildStrenght();
-        System.out.println(ob.getOrk().getStrenght());
+        ArmySauron armySouron = new ArmySauron();
+        armySouron.setLocationRelativeTo(null);
+        armySouron.setVisible(true);
     }
 }
+

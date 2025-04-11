@@ -11,4 +11,37 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>mephi.b22901.kateero.laba2.Laba2</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+    </dependencies>
+     <build>
+        <plugins>
+            <!-- Maven Shade Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>LordOfTheRings-1.0-RELEASE-fat</finalName> 
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>mephi.b22901.kateero.laba2.Laba2</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
