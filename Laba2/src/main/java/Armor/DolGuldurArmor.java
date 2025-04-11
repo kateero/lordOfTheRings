@@ -4,7 +4,7 @@ public class DolGuldurArmor implements Armor{
 
     @Override
     public String armor() {
-        return "кольчуга";
+        return "chainmail";
     }
     
 }

@@ -4,11 +4,11 @@ public class DolGuldurWeapon implements Weapon {
 
     @Override
     public String basicWeapon() {
-        return "копьё";
+        return "spear";
     }
 
     @Override
     public String scoutWeapon() {
-        return "острый кинжал";
+        return "daggers";
     }
 }

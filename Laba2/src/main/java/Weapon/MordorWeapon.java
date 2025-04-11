@@ -4,12 +4,12 @@ public class MordorWeapon implements Weapon{
 
     @Override
     public String basicWeapon() {
-        return "тяжелый меч";
+        return "sword";
     }
 
     @Override
     public String scoutWeapon() {
-        return "лук";
+        return "bow";
     }
     
 }

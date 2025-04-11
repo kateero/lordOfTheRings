@@ -4,7 +4,7 @@ public class MordorArmor implements Armor{
 
     @Override
     public String armor() {
-        return "стальная броня";
+        return "steel";
     }
     
 }

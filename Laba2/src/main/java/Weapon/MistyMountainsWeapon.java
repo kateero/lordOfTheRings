@@ -4,12 +4,12 @@ public class MistyMountainsWeapon implements Weapon {
 
     @Override
     public String basicWeapon() {
-        return "топор";
+        return "axe";
     }
 
     @Override
     public String scoutWeapon() {
-        return "череполомный кастет";    
+        return "brass knuckles";    
     }
 
 }

@@ -2,9 +2,6 @@ package GUI;
 
 import Builders.OrkDirector;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.event.TreeSelectionEvent;
-import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
@@ -45,6 +42,13 @@ public class ArmySauron extends JFrame {
         jLabelAgility = new javax.swing.JLabel();
         jLabelIntelligence = new javax.swing.JLabel();
         jLabelHealth = new javax.swing.JLabel();
+        valueWeapon = new javax.swing.JLabel();
+        valueArmor = new javax.swing.JLabel();
+        valueBanner = new javax.swing.JLabel();
+        valueStrenght = new javax.swing.JProgressBar();
+        valueAgility = new javax.swing.JProgressBar();
+        valueIntelligence = new javax.swing.JProgressBar();
+        valueHealth = new javax.swing.JProgressBar();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -59,7 +63,12 @@ public class ArmySauron extends JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(101, 109, 74));
+
+        jTree1.setBackground(new java.awt.Color(240, 234, 210));
+        jTree1.setBorder(null);
         jTree1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 14)); // NOI18N
+        jTree1.setForeground(new java.awt.Color(40, 54, 24));
         jTree1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jTree1.setScrollsOnExpand(true);
         jTree1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -69,7 +78,9 @@ public class ArmySauron extends JFrame {
         });
         jScrollPane1.setViewportView(jTree1);
 
+        typeOrkComboBox.setBackground(new java.awt.Color(240, 234, 210));
         typeOrkComboBox.setFont(new java.awt.Font("Lucida Calligraphy", 0, 14)); // NOI18N
+        typeOrkComboBox.setForeground(new java.awt.Color(40, 54, 24));
         typeOrkComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Basic ork", "Leader", "Scout" }));
         typeOrkComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +88,9 @@ public class ArmySauron extends JFrame {
             }
         });
 
+        tribeComboBox.setBackground(new java.awt.Color(240, 234, 210));
         tribeComboBox.setFont(new java.awt.Font("Lucida Calligraphy", 0, 14)); // NOI18N
+        tribeComboBox.setForeground(new java.awt.Color(40, 54, 24));
         tribeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mordor", "Dol Guldur", "Misty Mountains"}));
         tribeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +98,9 @@ public class ArmySauron extends JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(188, 108, 37));
         jButton1.setFont(new java.awt.Font("Old English Text MT", 0, 16)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(254, 250, 224));
         jButton1.setText("Create Ork");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,56 +108,62 @@ public class ArmySauron extends JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(tribeComboBox, 0, 229, Short.MAX_VALUE)
-                            .addComponent(typeOrkComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(25, 25, 25)))
-                .addGap(18, 18, 18))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22)
-                .addComponent(typeOrkComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(tribeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
+        jPanel2.setBackground(new java.awt.Color(250, 237, 205));
 
-        jLabelName.setFont(new java.awt.Font("Lucida Handwriting", 0, 24)); // NOI18N
+        jLabelName.setFont(new java.awt.Font("TolkienCyr", 1, 32)); // NOI18N
+        jLabelName.setForeground(new java.awt.Color(188, 108, 37));
         jLabelName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        jLabelWeapon.setFont(new java.awt.Font("Old English Text MT", 0, 20)); // NOI18N
+        jLabelWeapon.setForeground(new java.awt.Color(40, 54, 24));
         jLabelWeapon.setText("Weapon:");
 
+        jLabelArmor.setFont(new java.awt.Font("Old English Text MT", 0, 20)); // NOI18N
+        jLabelArmor.setForeground(new java.awt.Color(40, 54, 24));
         jLabelArmor.setText("Armor:");
 
+        jLabelBanner.setFont(new java.awt.Font("Old English Text MT", 0, 20)); // NOI18N
+        jLabelBanner.setForeground(new java.awt.Color(40, 54, 24));
         jLabelBanner.setText("Banner:");
 
+        jLabelStrenght.setFont(new java.awt.Font("Old English Text MT", 0, 20)); // NOI18N
+        jLabelStrenght.setForeground(new java.awt.Color(40, 54, 24));
         jLabelStrenght.setText("Strenght:");
 
-        jLabelAgility.setText("Agility");
+        jLabelAgility.setFont(new java.awt.Font("Old English Text MT", 0, 20)); // NOI18N
+        jLabelAgility.setForeground(new java.awt.Color(40, 54, 24));
+        jLabelAgility.setText("Agility:");
 
-        jLabelIntelligence.setText("Intelligence");
+        jLabelIntelligence.setFont(new java.awt.Font("Old English Text MT", 0, 20)); // NOI18N
+        jLabelIntelligence.setForeground(new java.awt.Color(40, 54, 24));
+        jLabelIntelligence.setText("Intelligence:");
 
-        jLabelHealth.setText("Health");
+        jLabelHealth.setFont(new java.awt.Font("Old English Text MT", 0, 20)); // NOI18N
+        jLabelHealth.setForeground(new java.awt.Color(40, 54, 24));
+        jLabelHealth.setText("Health:");
+
+        valueWeapon.setFont(new java.awt.Font("TolkienCyr", 0, 24)); // NOI18N
+
+        valueArmor.setFont(new java.awt.Font("TolkienCyr", 0, 24)); // NOI18N
+
+        valueBanner.setFont(new java.awt.Font("TolkienCyr", 0, 24)); // NOI18N
+
+        valueStrenght.setMaximum(130);
+        valueStrenght.setBackground(new java.awt.Color(237, 224, 212));
+        valueStrenght.setFont(new java.awt.Font("TolkienCyr", 0, 18)); // NOI18N
+        valueStrenght.setForeground(new java.awt.Color(166, 138, 100));
+
+        valueAgility.setMaximum(130);
+        valueAgility.setBackground(new java.awt.Color(237, 224, 212));
+        valueAgility.setForeground(new java.awt.Color(166, 138, 100));
+
+        valueIntelligence.setMaximum(50);
+        valueIntelligence.setBackground(new java.awt.Color(237, 224, 212));
+        valueIntelligence.setForeground(new java.awt.Color(166, 138, 100));
+
+        valueHealth.setMaximum(200);
+        valueHealth.setBackground(new java.awt.Color(237, 224, 212));
+        valueHealth.setForeground(new java.awt.Color(166, 138, 100));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -153,52 +174,111 @@ public class ArmySauron extends JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabelHealth, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelIntelligence, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelAgility, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelStrenght, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelBanner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelArmor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabelWeapon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabelHealth, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelIntelligence, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                            .addComponent(jLabelAgility, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelStrenght, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelBanner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelArmor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelWeapon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 420, Short.MAX_VALUE)))
+                            .addComponent(valueWeapon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(valueBanner, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                            .addComponent(valueArmor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(valueHealth, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                                .addComponent(valueIntelligence, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(valueAgility, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(valueStrenght, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 30, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addComponent(jLabelName, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(jLabelWeapon)
+                .addGap(76, 76, 76)
+                .addComponent(jLabelName, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabelArmor)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelWeapon)
+                    .addComponent(valueWeapon))
                 .addGap(18, 18, 18)
-                .addComponent(jLabelBanner)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelArmor)
+                    .addComponent(valueArmor))
                 .addGap(18, 18, 18)
-                .addComponent(jLabelStrenght)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelBanner)
+                    .addComponent(valueBanner))
+                .addGap(52, 52, 52)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabelStrenght, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(valueStrenght, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabelAgility)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelAgility)
+                    .addComponent(valueAgility, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabelIntelligence)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelIntelligence)
+                    .addComponent(valueIntelligence, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabelHealth)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelHealth)
+                    .addComponent(valueHealth, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(126, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tribeComboBox, 0, 250, Short.MAX_VALUE)
+                                    .addComponent(typeOrkComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(65, 65, 65)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 25, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 16, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(typeOrkComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(tribeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -237,13 +317,25 @@ public class ArmySauron extends JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTree1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTree1MouseClicked
-        if (evt.getClickCount() == 2) {
+        
+        try {
+            if (evt.getClickCount() == 2) {
             TreePath path = jTree1.getPathForLocation(evt.getX(), evt.getY());
             if (path != null) {
                 DefaultMutableTreeNode node = (DefaultMutableTreeNode) path.getLastPathComponent();
                 Ork selectedOrk = (Ork) node.getUserObject();
                 jLabelName.setText(selectedOrk.getName());
+                valueWeapon.setText(selectedOrk.getWeapon());
+                valueArmor.setText(selectedOrk.getArmor());
+                valueBanner.setText(selectedOrk.getBanner());
+                valueStrenght.setValue((int) selectedOrk.getStrenght());
+                valueAgility.setValue((int) selectedOrk.getAgility());
+                valueIntelligence.setValue((int) selectedOrk.getIntelligence());
+                valueHealth.setValue((int) selectedOrk.getHealth());
             }
+        }
+        } catch (ClassCastException ex) {
+            System.out.println("Why are you poking here?");
         }
     }//GEN-LAST:event_jTree1MouseClicked
 
@@ -269,5 +361,12 @@ public class ArmySauron extends JFrame {
     private javax.swing.JTree jTree1;
     private javax.swing.JComboBox<String> tribeComboBox;
     private javax.swing.JComboBox<String> typeOrkComboBox;
+    private javax.swing.JProgressBar valueAgility;
+    private javax.swing.JLabel valueArmor;
+    private javax.swing.JLabel valueBanner;
+    private javax.swing.JProgressBar valueHealth;
+    private javax.swing.JProgressBar valueIntelligence;
+    private javax.swing.JProgressBar valueStrenght;
+    private javax.swing.JLabel valueWeapon;
     // End of variables declaration//GEN-END:variables
 }
