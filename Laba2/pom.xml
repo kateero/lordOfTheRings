@@ -18,9 +18,8 @@
             <version>1.0.2</version>
         </dependency>
     </dependencies>
-     <build>
+    <build>
         <plugins>
-            <!-- Maven Shade Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>

@@ -110,7 +110,7 @@ public class ArmySauron extends JFrame {
 
         jPanel2.setBackground(new java.awt.Color(250, 237, 205));
 
-        jLabelName.setFont(new java.awt.Font("TolkienCyr", 1, 32)); // NOI18N
+        jLabelName.setFont(new java.awt.Font("Lucida Calligraphy", 1, 24)); // NOI18N
         jLabelName.setForeground(new java.awt.Color(188, 108, 37));
         jLabelName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
@@ -142,11 +142,11 @@ public class ArmySauron extends JFrame {
         jLabelHealth.setForeground(new java.awt.Color(40, 54, 24));
         jLabelHealth.setText("Health:");
 
-        valueWeapon.setFont(new java.awt.Font("TolkienCyr", 0, 24)); // NOI18N
+        valueWeapon.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
 
-        valueArmor.setFont(new java.awt.Font("TolkienCyr", 0, 24)); // NOI18N
+        valueArmor.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
 
-        valueBanner.setFont(new java.awt.Font("TolkienCyr", 0, 24)); // NOI18N
+        valueBanner.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
 
         valueStrenght.setMaximum(130);
         valueStrenght.setBackground(new java.awt.Color(237, 224, 212));
@@ -188,11 +188,10 @@ public class ArmySauron extends JFrame {
                             .addComponent(valueWeapon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(valueBanner, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
                             .addComponent(valueArmor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(valueHealth, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                                .addComponent(valueIntelligence, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(valueAgility, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(valueStrenght, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(valueHealth, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                            .addComponent(valueIntelligence, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(valueAgility, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(valueStrenght, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 30, Short.MAX_VALUE)))
                 .addContainerGap())
         );
